@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<TodoContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnectionString"));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("AWSRDSSQLServerConnectionString"));
 });
 
 var app = builder.Build();
